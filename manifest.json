@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Spotify Chrome Notifications",
+  "description": "A Google Chrome extension that notifies you every time your Spotify Web Player plays a new song",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "notifications"
+  ],
+  "web_accessible_resources": [
+    "jquery-1.10.2.js",
+    "md5.js",
+    "background.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://play.spotify.com/apps/player/*"],
+      "all_frames": true,
+      "js": ["jquery-1.10.2.js", "md5.js", "background.js"]
+    }
+  ]
+}

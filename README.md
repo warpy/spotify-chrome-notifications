@@ -1,22 +1,22 @@
-spotify-chrome-notifications
+Spotify Chrome Notifications
 ============================
 
-A Google Chrome extension that notifies you every time your Spotify Web Player plays a new song.
+This is a Google Chrome extension that notifies you every time your Spotify Web Player plays a new song. Just something I built quickly to see how the webnotifications API works. More info on webnotifications:
 
 ###Installation
 
-I'll cover both techniques here because installing extensions `.crx` files from outside the Chrome Web Store is not allowed anymore.
+I'll cover both techniques here because installing extensions `crx` files from outside the Chrome Web Store is not allowed anymore.
 
-####Unpacked:
+#####Unpacked:
 
 1. Download/clone this repo to your machine
-2. Open [chrome://extensions] and click `Load unpacked extension...`
+2. Open [chrome://extensions](chrome://extensions) and click `Load unpacked extension...`
 3. Browse to the downloaded folder and click `Select`
 
-####Packed `.crx`:
+#####Packed:
 
 1. Download the file `spotify-chrome-notifications.crx` from this repo
-2. Open [chrome://extensions] and drag-and-drop the downloaded `.crx` file
+2. Open [chrome://extensions](chrome://extensions) and drag-and-drop the downloaded `crx` file
 
 ###Usage
 

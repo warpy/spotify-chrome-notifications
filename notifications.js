@@ -1,3 +1,5 @@
+console.log(chrome.notifications);
+
 if (window.webkitNotifications) {
   var stay = 4000,
     interval = 1000,

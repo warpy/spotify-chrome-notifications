@@ -1,7 +1,7 @@
 Spotify Chrome Notifications
 ============================
 
-This is a Google Chrome extension that notifies you every time your Spotify Web Player plays a new song. Just something I built quickly to see how the webnotifications API works. More info on webnotifications:
+This is a Google Chrome extension that notifies you every time your Spotify Web Player plays a new song. Just something I built quickly to see how the webnotifications API works.
 
 ###Installation
 

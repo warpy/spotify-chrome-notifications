@@ -29,30 +29,31 @@ if (window.Notification) {
       var result = {};
       var hash = null;
       var text = null;
-      var cont = true;
+      var cont = false;
       for (var i in checks) {
         if (checks.hasOwnProperty(i)) {
           text = checks[i].call();
           if (typeof text != "undefined" && text != null && text.length > 0) {
             result[i] = text;
-          } else {
-            cont = false;
+            cont = true;
           }
         }
       }
       if (cont) {
-        hash = hex_md5(JSON.stringify(result));
-        if (localStorage.scn_hash !== hash) {
-          localStorage.scn_hash = hash;
-          console.log(alert_str, "new song", result);
-          var notification = new window.Notification(result.name, {
-            body: result.artist,
-            icon: result.art
-          });
-          setTimeout(function() {
-            notification.close();
-          }, stay);
-        }
+        setTimeout(function() {
+          hash = hex_md5(JSON.stringify(result));
+          if (localStorage.scn_hash !== hash) {
+            localStorage.scn_hash = hash;
+            console.log(alert_str, "new song", result);
+            var notification = new window.Notification(result.name, {
+              body: result.artist,
+              icon: result.art
+            });
+            setTimeout(function() {
+              notification.close();
+            }, stay);
+          }
+        }, 200);
       }
     }, interval);
   });
